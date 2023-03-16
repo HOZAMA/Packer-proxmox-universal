@@ -54,11 +54,13 @@ network_adapters = [
 
 ## Необходимо заполнить файлы с перемеными
 
-credentials.pkr.hcl - API PROXMOX
-template/varibles.pkr.hcl - Переменные в ВМ / Сайзинги темлейта/ Настройки ВМ
+* credentials.pkr.hcl - API PROXMOX
+* template/varibles.pkr.hcl - Переменные в ВМ / Сайзинги темлейта/ Настройки ВМ
 +
-Желательно пробежаться по файлам в директории template/http/
+* Желательно пробежаться по файлам в директории template/http/
+
 -----------------------------------
+
 # Запуск создания темплейтов
 
 ```console
