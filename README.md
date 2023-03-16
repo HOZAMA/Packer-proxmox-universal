@@ -56,7 +56,6 @@ network_adapters = [
 
 * credentials.pkr.hcl - API PROXMOX
 * template/varibles.pkr.hcl - Переменные в ВМ / Сайзинги темлейта/ Настройки ВМ
-+
 * Желательно пробежаться по файлам в директории template/http/
 
 -----------------------------------
