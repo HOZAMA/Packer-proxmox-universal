@@ -1,0 +1,33 @@
+#cloud-config
+autoinstall:
+  version: 1
+  locale: en_US
+  keyboard:
+    layout: us
+  ssh:
+    install-server: true
+    allow-pw: true
+    disable_root: false
+    ssh_quiet_keygen: true
+    allow_public_ssh_keys: true
+  packages:
+    - sudo
+    - openssh-server
+    - qemu-guest-agent
+    - net-tools
+  storage:
+    swap:
+      size: 0
+    layout:
+      name: lvm
+  user-data:
+    chpasswd:
+      expire: false
+      list:
+        - root:$6$pWnGk/fELHu4ayjx$oUVs.zxehLX37KucL/QjoeBei/w1C36KhQbCeZoGGOZKgOtqZa8sUl/W.InI9SQEBDzYhrY74/ZYtUZ9/Z6as0
+    package_upgrade: false
+    timezone: Europe/Moscow
+  late-commands:
+      - sed -i -e 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /target/etc/ssh/sshd_config
+#      - usermod -R /target --password $1$q.r9gboU$I4Exv7nKnVJqc8NQpGatn/ root
+#cloud-config
