@@ -74,6 +74,7 @@ variable "disks" {
     disk_size     = string
     format        = string
     storage_pool  = string
+    storage_pool_type  = string
   }))
   description = "disk setting vm"
   default = [
@@ -82,6 +83,7 @@ variable "disks" {
     disk_size     = "20G"
     format        = "raw"
     storage_pool  = "local"
+    storage_pool_type   = "lvm"
     }
   ]
 }

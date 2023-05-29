@@ -30,6 +30,7 @@ source "proxmox-iso" "template" {
         disk_size     = disks.value.disk_size
         format        = disks.value.format
         storage_pool  = disks.value.storage_pool
+        storage_pool_type   = disks.value.storage_pool_type
       }
     }
     dynamic "network_adapters" {
